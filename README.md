@@ -1,26 +1,24 @@
 This repository contains a collection of interview-style questions designed to test understanding of Java's functional programming features, primarily the Stream API, lambda expressions, and method references, introduced in Java 8.
 
+
 ❓ Question 1: E-commerce Product Filtering Scenario: Imagine you're working on an e-commerce platform. You have a list of Product objects. You need to implement a feature to find all electronic products that are currently in stock and cost more than $1000. The result should be a list of the names of these products, sorted alphabetically.
 
 Task: Given a List, write a method that returns a List containing the names of the qualifying products.
 
-Provided Code:
-
-class Product { private String name; private String category; private double price; private int stock;
-
-// Constructors, Getters
+// Provided Code:
+class Product { 
+  private String name;
+  private String category;
+  private double price;
+  private int stock;
 }
 
 What to look for:
 
 Streams API: The candidate should use the .stream() method on the list.
-
 Filtering: Correct use of filter() multiple times or with a combined predicate.
-
 Mapping: Use of map() to transform a Stream into a Stream.
-
 Sorting: Use of sorted() for alphabetical ordering.
-
 Terminal Operation: Correct use of collect(Collectors.toList()) to get the final list.
 
 ❓ Question 2: Employee Data Aggregation Scenario: You're working on an HR application. You have a List. Your task is to calculate the average salary for all employees in the "Engineering" department who are older than 30.
